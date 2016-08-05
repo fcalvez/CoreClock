@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{908D64D8-5BBF-40AB-8FFA-12C64DB7D958}</ProjectGuid>
+    <RootNamespace>Clock</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Clock</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\HacksterLive\Surat_India\Particle_Photon_Headers_11_MAY_2016;$(IncludePath)</IncludePath>
+    <LibraryPath />
+    <LibraryWPath />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\HacksterLive\Surat_India\Particle_Photon_Headers_11_MAY_2016;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\HacksterLive\Surat_India\Particle_Photon_Headers_11_MAY_2016;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\HacksterLive\Surat_India\Particle_Photon_Headers_11_MAY_2016;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <CustomBuild>
+      <Command>del *.bin
+particle compile photon main.cpp
+particle flash 320028000547343232363230 photon~1.bin</Command>
+      <Outputs>p.bin</Outputs>
+    </CustomBuild>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <CustomBuild>
+      <Command>del *.bin
+particle compile photon main.cpp
+particle flash 320028000547343232363230 photon~1.bin</Command>
+      <Outputs>p.bin</Outputs>
+    </CustomBuild>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <CustomBuild>
+      <Command>del *.bin
+particle compile photon main.cpp
+particle flash 320028000547343232363230 photon~1.bin</Command>
+      <Outputs>p.bin</Outputs>
+    </CustomBuild>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <CustomBuild>
+      <Command>del *.bin
+particle compile photon main.cpp
+particle flash 320028000547343232363230 photon~1.bin</Command>
+      <Outputs>p.bin</Outputs>
+    </CustomBuild>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="main.cpp">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">@echo off
+setlocal enabledelayedexpansion enableextensions
+
+goto voidMain
+
+:fn_GetDeviceId
+set file=Config.ini
+set area=Device
+set key=Id
+set currarea=
+for /f "usebackq delims=" %%a in ("!file!") do (
+    set ln=%%a
+    if "x!ln:~0,1!"=="x[" (
+        set currarea=!ln!
+    ) else (
+        for /f "tokens=1,2 delims==" %%b in ("!ln!") do (
+            set currkey=%%b
+            set currval=%%c
+            if "x!area!"=="x!currarea!" if "x!key!"=="x!currkey!" (
+                echo "Selected device id is !currval!. To change device id, open Config.ini"
+            )
+        )
+    )
+)
+goto returnMain
+
+:voidMain
+echo.
+echo ==========================================
+echo = Compiling over Particle Cloud          =
+echo ==========================================
+del *.bin
+
+
+set firstFile=
+
+for %%x in (*.cpp) do set firstFile=!firstFile! "%%x"
+ 
+for %%x in (*.h) do set firstFile=!firstFile! "%%x"
+
+cmd /c particle compile photon%firstFile%
+echo.
+echo ==========================================
+echo = Flashing over cloud                    =
+echo ==========================================
+goto fn_GetDeviceId
+:returnMain
+particle flash %currval% photon~1.bin
+echo ==========================================
+echo.
+echo = FLASHING DONE. PLEASE WAIT WHILE YOU PARTICLE PHOTON REBOOTS. =</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">@echo off
+setlocal enabledelayedexpansion enableextensions
+
+goto voidMain
+
+:fn_GetDeviceId
+set file=Config.ini
+set area=Device
+set key=Id
+set currarea=
+for /f "usebackq delims=" %%a in ("!file!") do (
+    set ln=%%a
+    if "x!ln:~0,1!"=="x[" (
+        set currarea=!ln!
+    ) else (
+        for /f "tokens=1,2 delims==" %%b in ("!ln!") do (
+            set currkey=%%b
+            set currval=%%c
+            if "x!area!"=="x!currarea!" if "x!key!"=="x!currkey!" (
+                echo "Selected device id is !currval!. To change device id, open Config.ini"
+            )
+        )
+    )
+)
+goto returnMain
+
+:voidMain
+echo.
+echo ==========================================
+echo = Compiling over Particle Cloud          =
+echo ==========================================
+del *.bin
+
+
+set firstFile=
+
+for %%x in (*.cpp) do set firstFile=!firstFile! "%%x"
+ 
+for %%x in (*.h) do set firstFile=!firstFile! "%%x"
+
+cmd /c particle compile photon%firstFile%
+echo.
+echo ==========================================
+echo = Flashing over cloud                    =
+echo ==========================================
+goto fn_GetDeviceId
+:returnMain
+particle flash %currval% photon~1.bin
+echo ==========================================
+echo.
+echo = FLASHING DONE. PLEASE WAIT WHILE YOU PARTICLE PHOTON REBOOTS. =</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">@echo off
+setlocal enabledelayedexpansion enableextensions
+
+goto voidMain
+
+:fn_GetDeviceId
+set file=Config.ini
+set area=Device
+set key=Id
+set currarea=
+for /f "usebackq delims=" %%a in ("!file!") do (
+    set ln=%%a
+    if "x!ln:~0,1!"=="x[" (
+        set currarea=!ln!
+    ) else (
+        for /f "tokens=1,2 delims==" %%b in ("!ln!") do (
+            set currkey=%%b
+            set currval=%%c
+            if "x!area!"=="x!currarea!" if "x!key!"=="x!currkey!" (
+                echo "Selected device id is !currval!. To change device id, open Config.ini"
+            )
+        )
+    )
+)
+goto returnMain
+
+:voidMain
+echo.
+echo ==========================================
+echo = Compiling over Particle Cloud          =
+echo ==========================================
+del *.bin
+
+
+set firstFile=
+
+for %%x in (*.cpp) do set firstFile=!firstFile! "%%x"
+ 
+for %%x in (*.h) do set firstFile=!firstFile! "%%x"
+
+cmd /c particle compile photon%firstFile%
+echo.
+echo ==========================================
+echo = Flashing over cloud                    =
+echo ==========================================
+goto fn_GetDeviceId
+:returnMain
+particle flash %currval% photon~1.bin
+echo ==========================================
+echo.
+echo = FLASHING DONE. PLEASE WAIT WHILE YOU PARTICLE PHOTON REBOOTS. =</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">@echo off
+setlocal enabledelayedexpansion enableextensions
+
+goto voidMain
+
+:fn_GetDeviceId
+set file=Config.ini
+set area=Device
+set key=Id
+set currarea=
+for /f "usebackq delims=" %%a in ("!file!") do (
+    set ln=%%a
+    if "x!ln:~0,1!"=="x[" (
+        set currarea=!ln!
+    ) else (
+        for /f "tokens=1,2 delims==" %%b in ("!ln!") do (
+            set currkey=%%b
+            set currval=%%c
+            if "x!area!"=="x!currarea!" if "x!key!"=="x!currkey!" (
+                echo "Selected device id is !currval!. To change device id, open Config.ini"
+            )
+        )
+    )
+)
+goto returnMain
+
+:voidMain
+echo.
+echo ==========================================
+echo = Compiling over Particle Cloud          =
+echo ==========================================
+del *.bin
+
+
+set firstFile=
+
+for %%x in (*.cpp) do set firstFile=!firstFile! "%%x"
+ 
+for %%x in (*.h) do set firstFile=!firstFile! "%%x"
+
+cmd /c particle compile photon%firstFile%
+echo.
+echo ==========================================
+echo = Flashing over cloud                    =
+echo ==========================================
+goto fn_GetDeviceId
+:returnMain
+particle flash %currval% photon~1.bin
+echo ==========================================
+echo.
+echo = FLASHING DONE. PLEASE WAIT WHILE YOU PARTICLE PHOTON REBOOTS. =</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Anurag Vasanwala Particle Photon Tools for VSC15</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Anurag Vasanwala Particle Photon Tools for VSC15</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Anurag Vasanwala Particle Photon Tools for VSC15</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Anurag Vasanwala Particle Photon Tools for VSC15</Message>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Adafruit_LEDBackpack.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="PinMappings.h" />
+    <ClInclude Include="SparkTime.h" />
+    <ClInclude Include="sprites.h" />
+    <ClInclude Include="spr_numbers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Adafruit_LEDBackpack.cpp" />
+    <ClCompile Include="SparkTime.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
